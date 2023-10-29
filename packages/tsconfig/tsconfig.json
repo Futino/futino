@@ -1,8 +1,7 @@
 {
   "compilerOptions": {
-    // add Bun type definitions
     "types": [
-      "bun-types"
+      "bun-types" // add Bun global
     ],
     // enable latest features
     "lib": [
