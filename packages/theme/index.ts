@@ -1,11 +1,4 @@
-export interface ThemeConfig {
-  primaryColor: string;
-  secondaryColor: string;
-}
+export { ConfigParameters, ThemeConfig } from './src/infra';
 
-export function defineConfig(config: ThemeConfig) {
-  // Generate additional configuration based on the provided theme config
-  return {
-    config
-  };
-}
+export { default as defineConfig } from './src/main';
+
