@@ -6,12 +6,12 @@
 
   let chosenHours = 5;
 
-  $: hours = chosenHours + maintenanceHours;
-  $: expenses = hours * hourlyRate + cogs;
-  $: markedUp = expenses * markup;
-  // Calculate stripe fees
-  $: fees = markedUp * 0.0713 + 0.6;
-  $: price = markedUp + fees;
+	$: hours = chosenHours + maintenanceHours;
+	$: expenses = hours * hourlyRate + cogs;
+	$: markedUp = expenses * markup;
+	// Calculate stripe fees
+	$: fees = markedUp * 0.0713 + 0.6;
+	$: price = markedUp + fees;
 </script>
 
 <input type="number" name="chosenHours" bind:value={chosenHours} />
