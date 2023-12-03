@@ -19,7 +19,7 @@
 	$: hours = chosenHours + maintenanceHours;
 	$: expenses = hours * hourlyRate + cogs;
 	$: markedUp = expenses * markup;
-	$: fees = markedUp * 0.0713 + 0.6;
+	$: fees = markedUp * 0.0713 + 0.3;
 	$: price = markedUp + fees;
 </script>
 
