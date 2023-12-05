@@ -4,7 +4,17 @@
 
 <main class="flex flex-col justify-center items-center bg-background text-white">
 	<!-- Hero -->
-	<section class="h-screen w-screen bg-gradient-to-b from-secondary to-background" />
+	<section
+		class="h-screen flex justify-center items-center w-screen bg-gradient-to-b from-secondary to-background"
+	>
+		<div class="text-left text-background flex flex-col justify-center items-center">
+			<h1>Brew</h1>
+			<h1>Your</h1>
+			<h1>Digital Presence</h1>
+			<h1>With a</h1>
+			<h1>Custom Website</h1>
+		</div>
+	</section>
 
 	<!-- Services -->
 	<section class="max-w-5xl grid grid-cols-4 gap-4">
