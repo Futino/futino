@@ -49,5 +49,6 @@
 		</Card.Root>
 	</section>
 
+	<!-- Give some spacing on the bottom for looking at section above -->
 	<section class="h-screen" />
 </main>
