@@ -6,6 +6,7 @@
 	<!-- Hero -->
 	<section class="h-screen w-screen bg-gradient-to-b from-secondary to-background" />
 
+	<!-- Services -->
 	<section class="max-w-5xl grid grid-cols-4 gap-4">
 		<Card.Root>
 			<Card.Header>
@@ -16,6 +17,7 @@
 				</Card.Description>
 			</Card.Header>
 		</Card.Root>
+
 		<Card.Root>
 			<Card.Header>
 				<Card.Title>Design</Card.Title>
@@ -25,6 +27,7 @@
 				</Card.Description>
 			</Card.Header>
 		</Card.Root>
+
 		<Card.Root>
 			<Card.Header>
 				<Card.Title>Design</Card.Title>
@@ -34,6 +37,7 @@
 				</Card.Description>
 			</Card.Header>
 		</Card.Root>
+
 		<Card.Root>
 			<Card.Header>
 				<Card.Title>Design</Card.Title>
