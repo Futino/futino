@@ -40,8 +40,8 @@
 			<Card.Header>
 				<Card.Title>Design</Card.Title>
 				<Card.Description>
-					Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint
-					consectetur cupidatat.
+					We create eye-catching and user-friendly coffee shop websites that uniquely reflect your
+					brand. Our designs are all about making a memorable impression for your visitors.
 				</Card.Description>
 			</Card.Header>
 		</Card.Root>
@@ -50,8 +50,9 @@
 			<Card.Header>
 				<Card.Title>Development</Card.Title>
 				<Card.Description>
-					Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint
-					consectetur cupidatat.
+					We build seamless and scalable coffee shop websites using the latest web tech. From smooth
+					menus to online ordering, our solutions simplify operations and elevate customer
+					engagement.
 				</Card.Description>
 			</Card.Header>
 		</Card.Root>
@@ -60,18 +61,19 @@
 			<Card.Header>
 				<Card.Title>Hosting</Card.Title>
 				<Card.Description>
-					Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint
-					consectetur cupidatat.
+					Experience top-tier website performance with our reliable hosting services. Our
+					cutting-edge servers ensure fast loading, high uptime, and secure data management,
+					providing a consistently smooth online experience.
 				</Card.Description>
 			</Card.Header>
 		</Card.Root>
 
 		<Card.Root>
 			<Card.Header>
-				<Card.Title>SEO</Card.Title>
+				<Card.Title>Search Engine Optimization</Card.Title>
 				<Card.Description>
-					Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint
-					consectetur cupidatat.
+					We use smart strategies to make sure your coffee shop pops up first when people search
+					online. Think of it as giving your business a spotlight on the internet stage.
 				</Card.Description>
 			</Card.Header>
 		</Card.Root>
