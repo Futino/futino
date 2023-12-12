@@ -1,6 +1,8 @@
 <script lang="ts">
+	import { Prose } from '$lib/components/ui/prose';
 	import * as Card from '$lib/components/ui/card';
 	import { Button } from '$lib/components/ui/button';
+	import PricingSlider from './PricingSlider.svelte';
 </script>
 
 <main class="flex flex-col justify-center items-center bg-background text-white">
@@ -76,4 +78,30 @@
 
 	<!-- Give some spacing on the bottom for looking at section above -->
 	<section class="h-screen" />
+
+	<section>
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+			<img src=".." alt="" class="w-full h-full aspect-[1] bg-primary not-prose" />
+			<Prose>
+				<div class="flex flex-col gap-4 prose">
+					<h1 class="prose prose-stone">THE #1 COFFEE WEB-SERVICES AGENCY</h1>
+					<p>
+						Welcome to Caffeino, where passion for coffee meets digital excellence. As a specialized
+						web-services agency tailored for coffee shops and roasters, we’ve navigated the unique
+						landscape of the coffee industry to gain an expertise that extends beyond anyother
+						freelancer or agency.
+					</p>
+					<p>
+						At Caffeino, we understand the pulse of the coffee community. Beyond just creating
+						websites, we craft digital experiences that resonate with coffee enthusiasts — where
+						every click, scroll, and interaction brews a blend of technology and coffee culture.
+						Join us in this journey as we elevate your coffee brand in the digital world. Your
+						success is our daily grind.
+					</p>
+				</div>
+			</Prose>
+		</div>
+	</section>
+	<div />
+	<PricingSlider />
 </main>

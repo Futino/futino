@@ -1,4 +1,6 @@
 import { fontFamily } from "tailwindcss/defaultTheme";
+import fTypography from '../../futino-new-typography.cjs';
+const alpha = '<alpha-value>';
 
 /** @type {import('tailwindcss').Config} */
 const config = {
@@ -56,8 +58,48 @@ const config = {
 			},
 			fontFamily: {
 				sans: [...fontFamily.sans]
-			}
-		}
+			},
+
+      typography: ({ colors }) => ({
+        ...fTypography(colors, alpha), ...{
+          DEFAULT: {
+            css: {
+              h1: {
+                fontFamily: "Antonio",
+              },
+              h2: {
+                fontFamily: "Antonio",
+              },
+              h3: {
+                fontFamily: "Antonio",
+              },
+              h4: {
+                fontfamily: "Antonio",
+              },
+              h5: {
+                fontfamily: "Antonio",
+              },
+
+              h6: {
+                fontfamily: "Antonio",
+              },
+              p: {
+                fontFamily: "Orienta",
+                letterSpacing: "0.5",
+                lineHeight: "1.5",
+                opacity: '0.75'
+              }
+            }
+          },
+        }
+      }),
+
+    },
+    plugins: [
+            require('@tailwindcss/typography'),
+
+          ],
+
 	},
 };
 
