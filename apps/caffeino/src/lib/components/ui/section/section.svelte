@@ -1,33 +1,21 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { inview } from 'svelte-inview';
-	import { cssClasses } from 'shadcn-svelte';
+	import type { HTMLAttributes } from 'svelte/elements';
+	import { cn } from '$lib/utils';
 
-	export let background = '';
-	export let border = '';
-	export let padding = '';
-	export let shadow = '';
-	export let gap = 'gap-6';
-	export let typography = '';
+	type $$Props = HTMLAttributes<HTMLDivElement>;
 
-	export let useInview = false;
+	let className: $$Props['class'] = undefined;
+	export { className as class };
+
+	export let useInview: boolean = false;
+	export let scrollEnterHeight: number;
+	export let onInviewEnter: () => void = () => {};
 
 	let scrollY: number;
-	export let scrollEnterHeight: number;
-	export let onInviewEnter: () => () => {};
 
-	function setScrollEnterHeight() {
-		scrollEnterHeight = scrollY;
-	}
-
-	let classesBase = cssClasses`
-    grid place-items-center relative
-    ${background} ${border} ${padding} ${shadow} ${typography} ${$$props.class}
-  `;
-
-	let mounted = false;
 	onMount(() => {
-		mounted = true;
 		console.log('section mounted');
 	});
 </script>
@@ -37,14 +25,16 @@
 <section
 	use:inview
 	on:inview_enter={(event) => {
-		setScrollEnterHeight();
+		scrollEnterHeight = scrollY;
 		if (onInviewEnter) {
 			onInviewEnter();
 		}
 	}}
-	class={classesBase}
-	style={$$props.style}
-	id={$$props.id}
+	class={cn(
+		'py-20 grid place-items-center relative px-4 md:px-6 lg:px-8 xl:px-12 2xl:px-18 max-w-7xl',
+		className
+	)}
+	{...$$restProps}
 >
 	<slot />
 </section>

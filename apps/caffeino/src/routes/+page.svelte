@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { Prose } from '$lib/components/ui/prose';
+	import { Section } from '$lib/components/ui/section';
 	import * as Card from '$lib/components/ui/card';
 	import { Button } from '$lib/components/ui/button';
 	import PricingSlider from './PricingSlider.svelte';
@@ -79,12 +80,12 @@
 	<!-- Give some spacing on the bottom for looking at section above -->
 	<section class="h-screen" />
 
-	<section>
+	<Section>
 		<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 			<img src=".." alt="" class="w-full h-full aspect-[1] bg-primary not-prose" />
 			<Prose>
 				<div class="flex flex-col gap-4 prose">
-					<h1 class="prose prose-stone">THE #1 COFFEE WEB-SERVICES AGENCY</h1>
+					<h1 class="prose lg:prose-xl">THE #1 COFFEE WEB-SERVICES AGENCY</h1>
 					<p>
 						Welcome to Caffeino, where passion for coffee meets digital excellence. As a specialized
 						web-services agency tailored for coffee shops and roasters, we’ve navigated the unique
@@ -101,7 +102,7 @@
 				</div>
 			</Prose>
 		</div>
-	</section>
+	</Section>
 	<div />
 	<PricingSlider />
 </main>
