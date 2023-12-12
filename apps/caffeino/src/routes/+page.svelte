@@ -9,28 +9,31 @@
 <main class="flex flex-col justify-center items-center bg-background text-white">
 	<!-- Hero -->
 	<section
-		class="h-screen grid grid-cols-2 justify-center items-center w-screen bg-gradient-to-b from-secondary to-background"
+		class="h-screen grid justify-center items-center w-screen bg-gradient-to-b from-secondary to-background
+	"
 	>
-		<div class="text-left text-background flex flex-col justify-center items-center">
-			<h1>Brew</h1>
-			<h1>Your</h1>
-			<h1>Digital Presence</h1>
-			<h1>With a</h1>
-			<h1>Custom Website</h1>
-		</div>
-		<div class="text-left flex flex-col justify-center items-center">
-			<Card.Root>
-				<Card.Header>
-					<Card.Title>Design</Card.Title>
-					<Card.Description>
-						Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint
-						consectetur cupidatat.
-					</Card.Description>
-				</Card.Header>
-				<Card.Footer>
-					<Button variant="outline">See pricing</Button>
-				</Card.Footer>
-			</Card.Root>
+		<div class="max-w-5xl h-screen grid grid-cols-2 justify-center items-center">
+			<div class="text-left text-background flex flex-col justify-center items-center">
+				<h1>Brew</h1>
+				<h1>Your</h1>
+				<h1>Digital Presence</h1>
+				<h1>With a</h1>
+				<h1>Custom Website</h1>
+			</div>
+			<div class="text-left flex flex-col justify-center items-center">
+				<Card.Root>
+					<Card.Header>
+						<Card.Title>Design</Card.Title>
+						<Card.Description>
+							Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint
+							consectetur cupidatat.
+						</Card.Description>
+					</Card.Header>
+					<Card.Footer>
+						<Button variant="outline">See pricing</Button>
+					</Card.Footer>
+				</Card.Root>
+			</div>
 		</div>
 	</section>
 
