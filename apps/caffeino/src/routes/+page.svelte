@@ -138,7 +138,7 @@
 			</div>
 		</Section>
 		<Section>
-			<div class="flex flex-row justify-between">
+			<div class="flex flex-row justify-between w-full">
 				<div class="flex flex-col gap-6">
 					<h2>PRICING</h2>
 					<p class="max-w-prose">
@@ -147,17 +147,18 @@
 					</p>
 				</div>
 				<div class="flex flex-col gap-6 text-right">
-					<h2 class="text-primary">
+					<h2 class="text-tertiary">
 						{price} / mo
 					</h2>
 					<h3>
 						{hours} / mo
 					</h3>
 				</div>
-			</div></Section
-		>
-
-		<PricingSlider bind:price bind:hours />
+			</div>
+			<div class="w-full py-12">
+				<PricingSlider bind:price bind:hours />
+			</div>
+		</Section>
 	</main>
 </Prose>
 

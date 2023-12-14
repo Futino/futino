@@ -20,10 +20,4 @@
 	$: price = currencyFormatter.format(markedUp + fees);
 </script>
 
-<div class="flex flex-col gap-12 items-center justify-center h-screen w-full">
-	<div class="flex gap-6 text-5xl">
-		<p>{hours} hours</p>
-		<p>{price}<span class="text-sm">per month</span></p>
-	</div>
-	<Slider bind:value={slider} class="max-w-2xl" max={500} min={0} step={1} />
-</div>
+<Slider bind:value={slider} class="max-w-2xl" max={500} min={0} step={1} />

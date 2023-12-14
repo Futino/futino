@@ -31,7 +31,7 @@
 		}
 	}}
 	class={cn(
-		'py-20 grid place-items-center relative px-4 md:px-6 lg:px-8 xl:px-12 2xl:px-18 max-w-9xl',
+		'py-20 grid place-items-center relative px-4 md:px-6 lg:px-8 xl:px-12 2xl:px-18 max-w-9xl w-full',
 		className
 	)}
 	{...$$restProps}
