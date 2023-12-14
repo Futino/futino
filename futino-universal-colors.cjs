@@ -53,5 +53,11 @@ const colors = {
 			DEFAULT: 'rgb(var(--universal-error-on))',
 		},
   },
+  success: {
+    DEFAULT: 'rgb(var(--universal-success))',
+    on: {
+      DEFAULT: 'rgb(var(--universal-success-on))',
+    },
+  }
 };
 module.exports = colors;

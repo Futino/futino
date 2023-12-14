@@ -9,6 +9,7 @@
 
 	export let price: string;
 	export let hours: number;
+	export let sliderPercent;
 
 	$: slider = [0];
 	$: hours = Math.floor(
@@ -18,6 +19,8 @@
 	$: markedUp = expenses * markup;
 	$: fees = markedUp * 0.0713 + 0.3;
 	$: price = currencyFormatter.format(markedUp + fees);
+	$: sliderPercent = slider[0] / 500;
+	$: console.log(slider);
 </script>
 
-<Slider bind:value={slider} class="max-w-2xl" max={500} min={0} step={1} />
+<Slider bind:value={slider} class="w-full" max={500} min={0} step={1} />

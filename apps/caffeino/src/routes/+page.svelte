@@ -7,7 +7,32 @@
 
 	// Current price of slider
 	let price: string = '$0.00';
+	// Current percent of slider
+	let sliderPercent = 0;
 	let hours: number = 0;
+
+	const cupSizes = [
+		{
+			label: 'Espresso',
+			img: 'cups/espresso.png',
+			description: 'Bare bone hosting.'
+		},
+		{
+			label: 'Cortado',
+			img: 'cups/cortado.png',
+			description: 'We can keep your menu and all your content up to date.'
+		},
+		{
+			label: 'Cappuccino',
+			img: 'cups/cappuccino.png',
+			description: 'We can make a simple yet fully custom-designed website.'
+		},
+		{
+			label: 'Mocha',
+			img: 'cups/mocha.png',
+			description: 'We can make a fully custom website with BIG custom features.'
+		}
+	];
 </script>
 
 <Prose>
@@ -98,7 +123,7 @@
 					class="w-full h-full aspect-[1] rounded-3xl bg-amber-900 not-prose"
 				/>
 				<div class="flex flex-col gap-6">
-					<h2 class="pb-6">THE #1 COFFEE <br /> WEB-SERVICES AGENCY</h2>
+					<h2 class="pb-3">THE #1 COFFEE <br /> WEB-SERVICES AGENCY</h2>
 					<p>
 						Welcome to Caffeino, where passion for coffee meets digital excellence. As a specialized
 						web-services agency tailored for coffee shops and roasters, we’ve navigated the unique
@@ -118,7 +143,7 @@
 		<Section>
 			<div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-start justify-items-start">
 				<div class="flex flex-col gap-6">
-					<h2 class="pb-6">OUR BEST BEANS</h2>
+					<h2 class="">OUR BEST BEANS</h2>
 					<p>
 						Meet the talented individuals who bring life to Caffeino's mission. Our team is a rich
 						blend of creativity, technical expertise, and a shared love for coffee. From seasoned
@@ -138,25 +163,47 @@
 			</div>
 		</Section>
 		<Section>
-			<div class="flex flex-row justify-between w-full">
-				<div class="flex flex-col gap-6">
+			<div class="flex flex-row justify-between w-full gap-6">
+				<div class="flex flex-col gap-3">
 					<h2>PRICING</h2>
 					<p class="max-w-prose">
 						We’ve replaced the traditional path of unreliable freelancers and expensive agencies
 						with a scalable subscription that depends on exactly what your businesses needs.
 					</p>
 				</div>
-				<div class="flex flex-col gap-6 text-right">
-					<h2 class="text-tertiary">
+				<div class="flex flex-col md:gap-3 text-right">
+					<h2 class="text-tertiary whitespace-nowrap">
 						{price} / mo
 					</h2>
-					<h3>
+					<h3 class="whitespace-nowrap">
 						{hours} / mo
 					</h3>
 				</div>
 			</div>
-			<div class="w-full py-12">
-				<PricingSlider bind:price bind:hours />
+			<div class="w-full py-12 flex flex-col gap-8">
+				<div class="relative h-full justify-between w-full text-center">
+					{#each cupSizes as cupSize, i}
+						<div
+							class="flex absolute text-left overflow-x-visible flex-col gap-2 {i == 0
+								? 'right-full translate-x-1/2'
+								: ''} 
+                {i == 1 ? 'left-1/3 -translate-x-1/2' : ''}
+                {i == 2 ? 'right-1/3 translate-x-1/2' : ''}
+                {i == 3 ? 'left-full -translate-x-1/2' : ''}
+                "
+						>
+							<img src={cupSize.img} alt="s" class="rounded-3xl" />
+							<h6
+								class="{sliderPercent >= i / (cupSizes.length - 1)
+									? 'text-tertiary'
+									: ''} uppercase"
+							>
+								{cupSize.label}
+							</h6>
+						</div>
+					{/each}
+				</div>
+				<PricingSlider bind:price bind:hours bind:sliderPercent />
 			</div>
 		</Section>
 	</main>
