@@ -67,7 +67,7 @@ const config = {
                 fontFamily: "TASA Orbiter Text",
                 letterSpacing: "0.5",
                 lineHeight: "1.5",
-                opacity: '0.75'
+                opacity: '0.75',
               }
             }
           }

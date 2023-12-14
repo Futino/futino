@@ -1,13 +1,12 @@
 import color_utils as color
-import display_colors as display
 # This represents a readonly array of all colour stops within Tailwind's design system.
 TONAL_STEPS = [ 50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950]
 
 
 # Define your three key colors in RGB format
-primary = '#4d84ba'
-secondary = '#363858'
-tertiary = '#4d84ba'
+primary = '#674230'
+secondary = '#674230'
+tertiary = '#7DCEC9'
 
 # Defining the standard colors
 red = '#ef4444'
@@ -107,4 +106,4 @@ color.format_css(output_file)
 
 tones = [(color.generate_tonal_palette(key, TONAL_STEPS)) for key in keys] 
 
-display.display(keys, tones)
+# display.display(keys, tones)
