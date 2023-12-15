@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	export let size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = 'md';
-	let proseClasses: string = '';
+	let proseClasses = '';
 	onMount(() => {
 		switch (size) {
 			case 'xs': {

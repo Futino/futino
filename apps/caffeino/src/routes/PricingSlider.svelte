@@ -5,7 +5,7 @@
 	const cogs = 5.35;
 	const markup = 1.4; // 40%
 	const minHours = 1;
-	const maxHours = 40;
+	const maxHours = 25;
 
 	export let price: string;
 	export let hours: number;

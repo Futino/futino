@@ -7,29 +7,29 @@
 	import Icon from '$lib/components/atoms/Icon.svelte';
 
 	// Current price of slider
-	let price: string = '$0.00';
+	let price = '$0.00';
 	// Current percent of slider
 	let sliderPercent = 0;
-	let hours: number = 0;
+	let hours = 0;
 
 	const cupSizes = [
 		{
-			label: 'Espresso',
+			label: 'Demi',
 			img: 'cups/espresso.png',
 			description: 'Bare bone hosting.'
 		},
 		{
-			label: 'Cappuccino',
+			label: 'Short',
 			img: 'cups/cappucino.png',
 			description: 'We can keep your menu and all your content up to date.'
 		},
 		{
-			label: 'Mocha',
+			label: 'Grande',
 			img: 'cups/mocha.png',
 			description: 'We can make a simple yet fully custom-designed website.'
 		},
 		{
-			label: 'Cold Brew',
+			label: 'Venti',
 			img: 'cups/coldbrew.png',
 			description: 'We can make a fully custom website with BIG custom features.'
 		}
@@ -76,6 +76,61 @@
 				'Guaranteed 98% Up-time',
 				'File uploads'
 			]
+		}
+	];
+
+	const addons = [
+		{
+			label: 'Google Ads',
+			prefix: '$',
+			price: 67,
+			cycle: 'mo',
+			icon: 'icons/ads.png',
+			description:
+				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eleifend aliquet neque, non convallis. Lorem ipsum dolor sit amet, adipiscing elit. Morbi aliquet neque, non convallis.'
+		},
+		{
+			label: 'Domain Management',
+			prefix: '$',
+			price: 67,
+			cycle: 'yr',
+			icon: 'icons/dms.png',
+			description:
+				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eleifend aliquet neque, non convallis. Lorem ipsum dolor sit amet, adipiscing elit. Morbi aliquet neque, non convallis.'
+		},
+		{
+			label: 'Task Automation',
+			prefix: '$',
+			price: 90,
+			cycle: 'hr',
+			icon: 'icons/automation.png',
+			description:
+				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eleifend aliquet neque, non convallis. Lorem ipsum dolor sit amet, adipiscing elit. Morbi aliquet neque, non convallis.'
+		},
+		{
+			label: 'Brand Book',
+			prefix: '$',
+			price: 420,
+			suffix: '',
+			icon: 'icons/brandbook.png',
+			description:
+				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eleifend aliquet neque, non convallis. Lorem ipsum dolor sit amet, adipiscing elit. Morbi aliquet neque, non convallis.'
+		},
+		{
+			label: 'Online Ordering',
+			price: 2.7,
+			suffix: '%',
+			icon: 'icons/onlineordering.png',
+			description:
+				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eleifend aliquet neque, non convallis. Lorem ipsum dolor sit amet, adipiscing elit. Morbi aliquet neque, non convallis.'
+		},
+		{
+			label: 'E-commerce',
+			price: 2.7,
+			suffix: '%',
+			icon: 'icons/ecommerce.png',
+			description:
+				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eleifend aliquet neque, non convallis. Lorem ipsum dolor sit amet, adipiscing elit. Morbi aliquet neque, non convallis.'
 		}
 	];
 </script>
@@ -169,27 +224,27 @@
 					alt="art"
 					class="w-full h-full aspect-[1] rounded-3xl bg-amber-900 not-prose"
 				/>
-				<div class="flex flex-col gap-6">
+				<div class="flex flex-col gap-6 text-center sm:text-left">
 					<h2 class="pb-3">THE #1 COFFEE <br /> WEB-SERVICES AGENCY</h2>
 					<p>
 						Welcome to Caffeino, where passion for coffee meets digital excellence. As a specialized
 						web-services agency tailored for coffee shops and roasters, we’ve navigated the unique
-						landscape of the coffee industry to gain an expertise that extends beyond anyother
-						freelancer or agency.
+						landscape of the digital coffee landscape to gain an expertise that extends beyond
+						anyother freelancer or agency.
 					</p>
 					<p>
-						At Caffeino, we understand the pulse of the coffee community. Beyond just creating
-						websites, we craft digital experiences that resonate with coffee enthusiasts — where
-						every click, scroll, and interaction brews a blend of technology and coffee culture.
-						Join us in this journey as we elevate your coffee brand in the digital world. Your
-						success is our daily grind.
+						At Caffeino, we understand what it takes for a coffee shop to stand out. Beyond just
+						creating websites, we craft digital experiences that resonate with coffee enthusiasts —
+						where every click, scroll, and interaction brews a blend of technology and coffee
+						culture. Join us in this journey as we elevate your coffee brand in the digital world.
+						Your success is our daily grind.
 					</p>
 				</div>
 			</div>
 		</Section>
 		<Section>
 			<div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-start justify-items-start">
-				<div class="flex flex-col gap-6">
+				<div class="flex flex-col gap-6 text-center sm:text-left">
 					<h2 class="">OUR BEST BEANS</h2>
 					<p>
 						Meet the talented individuals who bring life to Caffeino's mission. Our team is a rich
@@ -210,7 +265,9 @@
 			</div>
 		</Section>
 		<Section>
-			<div class="flex flex-row justify-between w-full gap-6 px-2">
+			<div
+				class="flex flex-col text-center sm:text-left sm:flex-row sm:justify-between w-full gap-6"
+			>
 				<div class="flex flex-col gap-3">
 					<h2>PRICING</h2>
 					<p class="max-w-prose">
@@ -218,7 +275,7 @@
 						with a scalable subscription that depends on exactly what your businesses needs.
 					</p>
 				</div>
-				<div class="flex flex-col md:gap-3 text-right">
+				<div class="flex flex-col md:gap-3 text-center sm:text-right">
 					<h2 class="text-tertiary whitespace-nowrap">
 						{price} / mo
 					</h2>
@@ -227,12 +284,12 @@
 					</h3>
 				</div>
 			</div>
-			<Prose size="xs" class="w-full">
-				<div class="w-full py-12 flex flex-col gap-6 px-12">
+			<Prose size="sm" class="w-full">
+				<div class="w-full py-12 md:py-24 flex flex-col gap-6 px-[3rem]">
 					<div class="relative flex flex-row justify-between h-full w-full text-center">
 						{#each cupSizes as cupSize, i}
 							<div
-								class="flex place-items-center text-left w-[4.5rem] sm:w-[7rem] md:w-[8rem] lg:w-[8rem] overflow-x-visible flex-col gap-2 {i ==
+								class="flex place-items-center text-left w-[3.5rem] sm:w-[7rem] md:w-[8rem] lg:w-[8rem] overflow-x-visible flex-col gap-2 {i ==
 								0
 									? 'right-full -translate-x-1/2'
 									: ''} 
@@ -244,9 +301,14 @@
 								<img
 									src={cupSize.img}
 									alt="s"
-									class="rounded-2xl lg:rounded-3xl object-cover w-2/3 px-1 py-1 aspect-[2/3] not-prose"
+									class="rounded-2xl lg:rounded-3xl object-cover w-full sm:w-2/3 px-1 py-1 aspect-[2/3] not-prose"
 								/>
-								<h6 class="{sliderPercent >= i / (cupSizes.length - 1) ? 'text-tertiary' : ''} ">
+								<h6
+									class="uppercase whitespace-normal font-bold {sliderPercent >=
+									i / (cupSizes.length - 1)
+										? 'text-tertiary'
+										: ''} "
+								>
 									{cupSize.label}
 								</h6>
 							</div>
@@ -263,7 +325,7 @@
                 {i == 1 ? 'left-1/3 -translate-x-1/4 ' : ''}
                 {i == 2 ? 'right-1/3 translate-x-1/4 ' : ''}
                 {i == 3 ? 'left-full translate-x-1/2' : ''}
-{sliderPercent >= i / (cupSizes.length - 1) ? 'text-tertiary' : ''} 
+                {sliderPercent >= i / (cupSizes.length - 1) ? 'text-tertiary' : ''} 
                 "
 							>
 								<svg
@@ -300,7 +362,7 @@
 										/>
 									</g></svg
 								>
-								<p class="text-center w-24 sm:w-28 md:w-32">
+								<p class="text-center text-background-on w-28 sm:w-28 md:w-32">
 									{cupSize.description}
 								</p>
 							</div>
@@ -312,7 +374,7 @@
 		<Section>
 			<div class="grid grid-cols-1 md:grid-cols-5 gap-y-6 md:gap-y-20">
 				{#each services as service, i}
-					<h2 class="uppercase text-tertiary col-span-2">{service.label}</h2>
+					<h2 class="uppercase col-span-2">{service.label}</h2>
 					<ul class="grid grid-cols-2 col-span-3 gap-x-6 gap-y-3">
 						{#each service.features as feature, i}
 							<li>
@@ -326,12 +388,57 @@
 			</div>
 		</Section>
 		<Section class="text-center">
-			<div class="flex flex-col place-items-center gap-4">
-				<h2>WE’VE GOT IT ALL - TO THE CHERRIES ON THE TOP</h2>
+			<div class="flex flex-col place-items-center gap-6">
+				<h2>
+					WE’VE GOT IT ALL <span class="hidden md:visible">-</span> <br class="md:hidden" /> TO THE CHERRIES
+					ON THE TOP
+				</h2>
 				<h6 class="max-w-prose">
 					Looking for more than just the perfect website? We’ve got you covered with our add-on
 					products & services.
 				</h6>
+				<div
+					class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 place-items-center gap-8 py-6 text-left"
+				>
+					{#each addons as addon, i}
+						<Card.Root>
+							<Card.Header>
+								<div class="flex flex-row justify-between">
+									<img
+										src="icons/ads.png"
+										alt=""
+										class="w-14 h-14 bg-background rounded-full not-prose"
+									/>
+									<div class="flex flex-row text-right items-end">
+										{#if addon.prefix}
+											<h2 class="text-tertiary">
+												{addon.prefix}
+											</h2>
+										{/if}
+										<h2 class="text-tertiary">
+											{addon.price}
+										</h2>
+										{#if addon.suffix}
+											<h2 class="text-tertiary">
+												{addon.suffix}
+											</h2>
+										{/if}
+										{#if addon.cycle}
+											<p class="pb-1">/{addon.cycle}</p>
+										{/if}
+									</div>
+								</div>
+							</Card.Header>
+							<Card.Content>
+								<Card.Title>{addon.label}</Card.Title>
+								<Card.Description>
+									{addon.description}
+								</Card.Description>
+								<Button size="long" variant="card">Get Started</Button>
+							</Card.Content>
+						</Card.Root>
+					{/each}
+				</div>
 			</div>
 		</Section>
 	</main>
