@@ -4,6 +4,7 @@
 	import * as Card from '$lib/components/ui/card';
 	import { Button } from '$lib/components/ui/button';
 	import PricingSlider from './PricingSlider.svelte';
+	import Icon from '$lib/components/atoms/Icon.svelte';
 
 	// Current price of slider
 	let price: string = '$0.00';
@@ -18,25 +19,71 @@
 			description: 'Bare bone hosting.'
 		},
 		{
-			label: 'Cortado',
-			img: 'cups/cortado.png',
-			description: 'We can keep your menu and all your content up to date.'
-		},
-		{
 			label: 'Cappuccino',
-			img: 'cups/cappuccino.png',
-			description: 'We can make a simple yet fully custom-designed website.'
+			img: 'cups/cappucino.png',
+			description: 'We can keep your menu and all your content up to date.'
 		},
 		{
 			label: 'Mocha',
 			img: 'cups/mocha.png',
+			description: 'We can make a simple yet fully custom-designed website.'
+		},
+		{
+			label: 'Cold Brew',
+			img: 'cups/coldbrew.png',
 			description: 'We can make a fully custom website with BIG custom features.'
+		}
+	];
+
+	const services = [
+		{
+			label: 'Design',
+			features: [
+				'Mobile-first Designs',
+				'User Experience (UX)',
+				'User Interface (UI)',
+				'Conversion Optimization',
+				'Motion & Animation Design',
+				'User Journey Mapping',
+				'User Flow Mapping',
+				'Scalable Design System',
+				'Iconography',
+				'Lead-generation Focused',
+				'Interaction Design',
+				'AI assisted Design',
+				'3D Design',
+				'Illustration Design'
+			]
+		},
+		{
+			label: 'Development',
+			features: [
+				'Web & Mobile App Development',
+				'Mobile-first Development',
+				'Performance Optimization',
+				'Google Analytics Tracking',
+				'Search Engine Optimization (SEO)',
+				'Transition Development',
+				'Up to 50 Pages'
+			]
+		},
+		{
+			label: 'Hosting',
+			features: [
+				'Live Server',
+				'Dedicated Storage of 10GB',
+				'Monthly Server Maintenance',
+				'Guaranteed 98% Up-time',
+				'File uploads'
+			]
 		}
 	];
 </script>
 
-<Prose>
-	<main class="flex flex-col justify-center items-center bg-background text-white">
+<Prose class="w-screen">
+	<main
+		class="flex flex-col justify-center place-items-center mx-auto items-center bg-background text-white overflow-hidden"
+	>
 		<!-- Hero -->
 		<section
 			class="h-screen grid justify-center items-center w-screen bg-gradient-to-b from-secondary to-background
@@ -68,7 +115,7 @@
 		</section>
 
 		<!-- Services -->
-		<section class="max-w-5xl grid grid-cols-4 gap-4">
+		<section class="max-w-5xl grid grid-cols-4 gap-4 hidden">
 			<Card.Root>
 				<Card.Header>
 					<Card.Title>Design</Card.Title>
@@ -118,7 +165,7 @@
 		<Section>
 			<div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-start justify-items-start">
 				<img
-					src=".."
+					src="coffee_cup.png"
 					alt="art"
 					class="w-full h-full aspect-[1] rounded-3xl bg-amber-900 not-prose"
 				/>
@@ -163,7 +210,7 @@
 			</div>
 		</Section>
 		<Section>
-			<div class="flex flex-row justify-between w-full gap-6">
+			<div class="flex flex-row justify-between w-full gap-6 px-2">
 				<div class="flex flex-col gap-3">
 					<h2>PRICING</h2>
 					<p class="max-w-prose">
@@ -180,30 +227,111 @@
 					</h3>
 				</div>
 			</div>
-			<div class="w-full py-12 flex flex-col gap-8">
-				<div class="relative h-full justify-between w-full text-center">
-					{#each cupSizes as cupSize, i}
-						<div
-							class="flex absolute text-left overflow-x-visible flex-col gap-2 {i == 0
-								? 'right-full translate-x-1/2'
-								: ''} 
-                {i == 1 ? 'left-1/3 -translate-x-1/2' : ''}
-                {i == 2 ? 'right-1/3 translate-x-1/2' : ''}
-                {i == 3 ? 'left-full -translate-x-1/2' : ''}
+			<Prose size="xs" class="w-full">
+				<div class="w-full py-12 flex flex-col gap-6 px-12">
+					<div class="relative flex flex-row justify-between h-full w-full text-center">
+						{#each cupSizes as cupSize, i}
+							<div
+								class="flex place-items-center text-left w-[4.5rem] sm:w-[7rem] md:w-[8rem] lg:w-[8rem] overflow-x-visible flex-col gap-2 {i ==
+								0
+									? 'right-full -translate-x-1/2'
+									: ''} 
+                {i == 1 ? 'left-1/3 -translate-x-[16.7%] ' : ''}
+                {i == 2 ? 'right-1/3 translate-x-[16.7%]' : ''}
+                {i == 3 ? 'left-full translate-x-1/2' : ''}
                 "
-						>
-							<img src={cupSize.img} alt="s" class="rounded-3xl" />
-							<h6
-								class="{sliderPercent >= i / (cupSizes.length - 1)
-									? 'text-tertiary'
-									: ''} uppercase"
 							>
-								{cupSize.label}
-							</h6>
-						</div>
-					{/each}
+								<img
+									src={cupSize.img}
+									alt="s"
+									class="rounded-2xl lg:rounded-3xl object-cover w-2/3 px-1 py-1 aspect-[2/3] not-prose"
+								/>
+								<h6 class="{sliderPercent >= i / (cupSizes.length - 1) ? 'text-tertiary' : ''} ">
+									{cupSize.label}
+								</h6>
+							</div>
+						{/each}
+					</div>
+					<PricingSlider bind:price bind:hours bind:sliderPercent />
+					<div class="relative flex flex-row h-full justify-between w-full text-center">
+						{#each cupSizes as cupSize, i}
+							<div
+								class="flex place-items-center text-left w-0 overflow-x-visible flex-col gap-4 {i ==
+								0
+									? 'right-full -translate-x-1/2'
+									: ''} 
+                {i == 1 ? 'left-1/3 -translate-x-1/4 ' : ''}
+                {i == 2 ? 'right-1/3 translate-x-1/4 ' : ''}
+                {i == 3 ? 'left-full translate-x-1/2' : ''}
+{sliderPercent >= i / (cupSizes.length - 1) ? 'text-tertiary' : ''} 
+                "
+							>
+								<svg
+									width="42"
+									viewBox="0 0 48
+                  {i == 0 ? '45' : ''}
+                  {i == 1 ? '162' : ''}
+                  {i == 2 ? '45' : ''}
+                  {i == 3 ? '162' : ''}"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+									><g id="SVGRepo_bgCarrier" stroke-width="0" /><g
+										id="SVGRepo_tracerCarrier"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									/><g id="SVGRepo_iconCarrier">
+										<path
+											d="M24 6L24  
+                      {i == 0 ? '43' : ''}
+                      {i == 1 ? '160' : ''}
+                      {i == 2 ? '43' : ''}
+                      {i == 3 ? '160' : ''}"
+											stroke="currentColor"
+											stroke-width="4"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+										/>
+										<path
+											d="M12 18L24 6L36 18"
+											stroke="currentColor"
+											stroke-width="4"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+										/>
+									</g></svg
+								>
+								<p class="text-center w-24 sm:w-28 md:w-32">
+									{cupSize.description}
+								</p>
+							</div>
+						{/each}
+					</div>
 				</div>
-				<PricingSlider bind:price bind:hours bind:sliderPercent />
+			</Prose>
+		</Section>
+		<Section>
+			<div class="grid grid-cols-1 md:grid-cols-5 gap-y-6 md:gap-y-20">
+				{#each services as service, i}
+					<h2 class="uppercase text-tertiary col-span-2">{service.label}</h2>
+					<ul class="grid grid-cols-2 col-span-3 gap-x-6 gap-y-3">
+						{#each service.features as feature, i}
+							<li>
+								<p>
+									{feature}
+								</p>
+							</li>
+						{/each}
+					</ul>
+				{/each}
+			</div>
+		</Section>
+		<Section class="text-center">
+			<div class="flex flex-col place-items-center gap-4">
+				<h2>WE’VE GOT IT ALL - TO THE CHERRIES ON THE TOP</h2>
+				<h6 class="max-w-prose">
+					Looking for more than just the perfect website? We’ve got you covered with our add-on
+					products & services.
+				</h6>
 			</div>
 		</Section>
 	</main>
@@ -229,6 +357,12 @@
 		margin: 0;
 	}
 	p {
+		margin: 0;
+	}
+	li {
+		margin: 0;
+	}
+	ul {
 		margin: 0;
 	}
 </style>

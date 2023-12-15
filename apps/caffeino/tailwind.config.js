@@ -17,6 +17,10 @@ const config = {
 			}
 		},
 		extend: {
+      width: {
+      '18': '4.5rem',
+      '26': '6.5rem',
+      },
       maxWidth: {
         '9xl': '92rem',
       },
