@@ -93,7 +93,7 @@
 		{
 			label: 'Domain Management',
 			prefix: '$',
-			price: 67,
+			price: 279,
 			cycle: 'yr',
 			icon: 'icons/dms.png',
 			description: `Simplify your online presence with hassle-free domain management. 
@@ -113,7 +113,7 @@
 		{
 			label: 'Brand Book',
 			prefix: '$',
-			price: 420,
+			price: 527,
 			suffix: '',
 			icon: 'icons/brandbook.png',
 			description: `Elevate your brand with our Brand Book service. 
@@ -176,7 +176,7 @@
 		</section>
 
 		<!-- Services -->
-		<section class="max-w-5xl grid grid-cols-4 gap-4 hidden">
+		<section class="max-w-5xl hiddenfornowgrid grid-cols-4 gap-4 hidden">
 			<Card.Root>
 				<Card.Header>
 					<Card.Title>Design</Card.Title>
@@ -220,15 +220,12 @@
 			</Card.Root>
 		</section>
 
-		<!-- Give some spacing on the bottom for looking at section above -->
-		<section class="h-screen" />
-
 		<Section>
 			<div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-start justify-items-start">
 				<img
 					src="coffee_cup.png"
 					alt="art"
-					class="w-full h-full aspect-[1] rounded-3xl bg-amber-900 not-prose object-cover"
+					class="w-full h-fit aspect-[5/4] rounded-3xl bg-amber-900 not-prose object-cover"
 				/>
 				<div class="flex flex-col gap-6 text-center sm:text-left">
 					<h2 class="pb-3">THE #1 COFFEE <br /> WEB-SERVICES AGENCY</h2>
@@ -416,10 +413,10 @@
 			</Prose>
 		</Section>
 		<Section>
-			<div class="grid grid-cols-1 md:grid-cols-5 gap-y-6 md:gap-y-20">
+			<div class="grid grid-cols-1 md:grid-cols-5 gap-y-4 md:gap-y-20">
 				{#each services as service, i}
-					<h2 class="uppercase col-span-2">{service.label}</h2>
-					<ul class="grid grid-cols-2 col-span-3 gap-x-6 gap-y-3">
+					<h2 class="uppercase col-span-2 pt-4 md:pt-0">{service.label}</h2>
+					<ul class="grid grid-cols-2 col-span-3 gap-x-6 gap-y-2">
 						{#each service.features as feature, i}
 							<li>
 								<p>
