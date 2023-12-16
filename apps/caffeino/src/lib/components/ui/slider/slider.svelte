@@ -14,11 +14,11 @@
 	class={cn('relative flex w-full touch-none select-none items-center', className)}
 	{...$$restProps}
 >
-	<span class="relative h-2 w-full grow overflow-hidden rounded-full bg-secondary">
+	<span class="relative h-3 md:h-4 lg:h-5 w-full grow overflow-hidden rounded-full bg-secondary">
 		<SliderPrimitive.Range class="absolute h-full bg-tertiary" />
 	</span>
 	<SliderPrimitive.Thumb
-		class="h-5 w-5 rounded-md border-2 border-primary bg-background ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
+		class="h-5 aspect-square md:h-6 lg:h-7 rounded-3xl border-2 border-primary bg-background ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
 	/>
 	<svg
 		class="absolute -z-10"

@@ -86,8 +86,9 @@
 			price: 67,
 			cycle: 'mo',
 			icon: 'icons/ads.png',
-			description:
-				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eleifend aliquet neque, non convallis. Lorem ipsum dolor sit amet, adipiscing elit. Morbi aliquet neque, non convallis.'
+			description: `Elevate your online visibility with targeted Google Ads. 
+        Our experts craft strategic campaigns to drive traffic, increase conversions, and maximize your ROI.
+        Boost your presence where it matters most and watch your business flourish.`
 		},
 		{
 			label: 'Domain Management',
@@ -95,8 +96,9 @@
 			price: 67,
 			cycle: 'yr',
 			icon: 'icons/dms.png',
-			description:
-				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eleifend aliquet neque, non convallis. Lorem ipsum dolor sit amet, adipiscing elit. Morbi aliquet neque, non convallis.'
+			description: `Simplify your online presence with hassle-free domain management. 
+        We take care of the technicalities, ensuring your domain is secure, up-to-date, and seamlessly integrated with your website.
+        Focus on your business while we handle the domain intricacies.`
 		},
 		{
 			label: 'Task Automation',
@@ -104,8 +106,9 @@
 			price: 90,
 			cycle: 'hr',
 			icon: 'icons/automation.png',
-			description:
-				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eleifend aliquet neque, non convallis. Lorem ipsum dolor sit amet, adipiscing elit. Morbi aliquet neque, non convallis.'
+			description: `Streamline your operations and save valuable time with our task automation solutions.
+        From routine processes to complex workflows, we design automation tailored to your needs.
+        Enjoy efficiency, reduce manual workload, and let technology work for you.`
 		},
 		{
 			label: 'Brand Book',
@@ -113,24 +116,27 @@
 			price: 420,
 			suffix: '',
 			icon: 'icons/brandbook.png',
-			description:
-				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eleifend aliquet neque, non convallis. Lorem ipsum dolor sit amet, adipiscing elit. Morbi aliquet neque, non convallis.'
+			description: `Elevate your brand with our Brand Book service. 
+        A Forbes study revealed a 23% average revenue increase for businesses maintaining brand consistency. 
+        From logo guidelines to tone of voice, we compile a cohesive document ensuring a unified brand image across all platforms.`
 		},
 		{
 			label: 'Online Ordering',
 			price: 2.7,
 			suffix: '%',
 			icon: 'icons/onlineordering.png',
-			description:
-				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eleifend aliquet neque, non convallis. Lorem ipsum dolor sit amet, adipiscing elit. Morbi aliquet neque, non convallis.'
+			description: `Experience the future of sales with our Online Ordering system. 
+        With mobile orders driving 20% of Starbucks' total sales, tap into the potential of this lucrative market.
+        Seamless integration into your website makes ordering and payment a breeze for your customers. `
 		},
 		{
 			label: 'E-commerce',
 			price: 2.7,
 			suffix: '%',
 			icon: 'icons/ecommerce.png',
-			description:
-				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eleifend aliquet neque, non convallis. Lorem ipsum dolor sit amet, adipiscing elit. Morbi aliquet neque, non convallis.'
+			description: `Brew success for your coffee business with our tailored Ecommerce solution. 
+        From seamless product listings to secure payment gateways, 
+        we create an online store that not only showcases your offerings but also ensures a smooth and secure shopping experience.`
 		}
 	];
 </script>
@@ -222,7 +228,7 @@
 				<img
 					src="coffee_cup.png"
 					alt="art"
-					class="w-full h-full aspect-[1] rounded-3xl bg-amber-900 not-prose"
+					class="w-full h-full aspect-[1] rounded-3xl bg-amber-900 not-prose object-cover"
 				/>
 				<div class="flex flex-col gap-6 text-center sm:text-left">
 					<h2 class="pb-3">THE #1 COFFEE <br /> WEB-SERVICES AGENCY</h2>
@@ -362,11 +368,49 @@
 										/>
 									</g></svg
 								>
-								<p class="text-center text-background-on w-28 sm:w-28 md:w-32">
+								<p class="text-center text-background-on w-28 sm:w-28 md:w-32 lg:w-36 xl:w-44">
 									{cupSize.description}
 								</p>
 							</div>
 						{/each}
+					</div>
+				</div>
+				<div
+					class=" bg-surface p-4 py-8 md:p-6 text-surface-on rounded-3xl flex flex-col items-start gap-12 place-items-center md:items-start"
+				>
+					<h2 class="text-center w-full uppercase">Here are some common Packages</h2>
+					<div class="flex flex-col place-items-center gap-24 text-center mx-auto">
+						<div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 place-items-center">
+							<div class="flex flex-row gap-4 md:gap-8 place-items-center">
+								<div class="flex flex-col w-fit gap-3 place-items-center">
+									<div class="flex flex-row justify-between w-fit place-items-center gap-2">
+										<img
+											src="cups/mocha.png"
+											alt="grande"
+											class="inline-block object-cover h-12 not-prose rounded-3xl"
+										/>
+										<h3 class="uppercase font-bold">Grande</h3>
+									</div>
+									<h4 class="uppercase">1 Month</h4>
+								</div>
+								<h1>+</h1>
+								<div class="flex flex-col gap-3 place-items-center">
+									<div class="flex flex-row place-items-center gap-2">
+										<img
+											src="cups/cappucino.png"
+											alt="grande"
+											class="inline-block object-cover h-12 not-prose rounded-3xl"
+										/>
+										<h3 class="uppercase font-bold">Short</h3>
+									</div>
+									<h4 class="uppercase">12 Months</h4>
+								</div>
+							</div>
+							<p class="max-w-sm md:text-left">
+								Perfect for a coffee shop to get a custom website and then have us maintain it for a
+								year.
+							</p>
+						</div>
 					</div>
 				</div>
 			</Prose>
@@ -401,7 +445,7 @@
 					class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 place-items-center gap-8 py-6 text-left"
 				>
 					{#each addons as addon, i}
-						<Card.Root>
+						<Card.Root class="h-full">
 							<Card.Header>
 								<div class="flex flex-row justify-between">
 									<img
@@ -434,7 +478,7 @@
 								<Card.Description>
 									{addon.description}
 								</Card.Description>
-								<Button size="long" variant="card">Get Started</Button>
+								<Button class="mt-auto" size="long" variant="card">Get Started</Button>
 							</Card.Content>
 						</Card.Root>
 					{/each}
