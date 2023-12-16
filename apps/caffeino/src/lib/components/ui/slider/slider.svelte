@@ -14,7 +14,7 @@
 	class={cn('relative flex w-full touch-none select-none items-center', className)}
 	{...$$restProps}
 >
-	<span class="relative h-3 md:h-4 lg:h-5 w-full grow overflow-hidden rounded-full bg-secondary">
+	<span class="relative h-3 md:h-4 lg:h-5 w-full grow overflow-hidden rounded-full bg-primary">
 		<SliderPrimitive.Range class="absolute h-full bg-tertiary" />
 	</span>
 	<SliderPrimitive.Thumb

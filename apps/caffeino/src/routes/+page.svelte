@@ -5,6 +5,7 @@
 	import { Button } from '$lib/components/ui/button';
 	import PricingSlider from './PricingSlider.svelte';
 	import Icon from '$lib/components/atoms/Icon.svelte';
+	import SearchBox from '$lib/components/atoms/SearchBox.svelte';
 
 	// Current price of slider
 	let price = '$0.00';
@@ -88,7 +89,8 @@
 			icon: 'icons/ads.png',
 			description: `Elevate your online visibility with targeted Google Ads. 
         Our experts craft strategic campaigns to drive traffic, increase conversions, and maximize your ROI.
-        Boost your presence where it matters most and watch your business flourish.`
+        Boost your presence where it matters most and watch your business flourish.`,
+			cta: 'Get Started'
 		},
 		{
 			label: 'Domain Management',
@@ -98,7 +100,8 @@
 			icon: 'icons/dms.png',
 			description: `Simplify your online presence with hassle-free domain management. 
         We take care of the technicalities, ensuring your domain is secure, up-to-date, and seamlessly integrated with your website.
-        Focus on your business while we handle the domain intricacies.`
+        Focus on your business while we handle the domain intricacies.`,
+			cta: 'Get Started'
 		},
 		{
 			label: 'Task Automation',
@@ -108,7 +111,8 @@
 			icon: 'icons/automation.png',
 			description: `Streamline your operations and save valuable time with our task automation solutions.
         From routine processes to complex workflows, we design automation tailored to your needs.
-        Enjoy efficiency, reduce manual workload, and let technology work for you.`
+        Enjoy efficiency, reduce manual workload, and let technology work for you.`,
+			cta: 'Get a Quote'
 		},
 		{
 			label: 'Brand Book',
@@ -118,7 +122,8 @@
 			icon: 'icons/brandbook.png',
 			description: `Elevate your brand with our Brand Book service. 
         A Forbes study revealed a 23% average revenue increase for businesses maintaining brand consistency. 
-        From logo guidelines to tone of voice, we compile a cohesive document ensuring a unified brand image across all platforms.`
+        From logo guidelines to tone of voice, we compile a cohesive document ensuring a unified brand image across all platforms.`,
+			cta: 'Get Started'
 		},
 		{
 			label: 'Online Ordering',
@@ -127,7 +132,8 @@
 			icon: 'icons/onlineordering.png',
 			description: `Experience the future of sales with our Online Ordering system. 
         With mobile orders driving 20% of Starbucks' total sales, tap into the potential of this lucrative market.
-        Seamless integration into your website makes ordering and payment a breeze for your customers. `
+        Seamless integration into your website makes ordering and payment a breeze for your customers. `,
+			cta: 'Get Started'
 		},
 		{
 			label: 'E-commerce',
@@ -136,44 +142,99 @@
 			icon: 'icons/ecommerce.png',
 			description: `Brew success for your coffee business with our tailored Ecommerce solution. 
         From seamless product listings to secure payment gateways, 
-        we create an online store that not only showcases your offerings but also ensures a smooth and secure shopping experience.`
+        we create an online store that not only showcases your offerings but also ensures a smooth and secure shopping experience.`,
+			cta: 'Get Started'
+		}
+	];
+
+	const common_packages = [
+		{
+			plans: [
+				{
+					label: 'Grande',
+					duration: 1
+				},
+				{
+					label: 'Short',
+					duration: 12
+				}
+			],
+			description:
+				'Perfect for a medium coffee shop to get a custom website and then have us maintain it for a year.'
+		},
+		{
+			plans: [
+				{
+					label: 'Grande-Short',
+					duration: 2
+				},
+				{
+					label: 'Demi',
+					duration: 12
+				}
+			],
+			description:
+				'Perfect for a shop with less upfront cash; build your custom website over two months then host it for the year.'
+		},
+		{
+			plans: [
+				{
+					label: 'Venti ',
+					duration: 1
+				},
+				{
+					label: 'Grande-Short',
+					duration: 12
+				}
+			],
+			description:
+				'Perfect for a large coffee shop that needs custom coded features and higher demands of constant website updates.'
 		}
 	];
 </script>
 
 <Prose class="w-screen">
 	<main
-		class="flex flex-col justify-center place-items-center mx-auto items-center bg-background text-white overflow-hidden"
+		class="flex flex-col justify-center place-items-center mx-auto items-center text-white overflow-hidden"
 	>
 		<!-- Hero -->
-		<section
-			class="h-screen grid justify-center items-center w-screen bg-gradient-to-b from-secondary to-background
+		<div
+			class="h-screen max-w-none w-screen grid justify-center items-center bg-gradient-to-b from-[#DEC7AC] from-50% to-background
 	"
 		>
-			<div class="max-w-5xl h-screen grid grid-cols-2 justify-center items-center">
-				<div class="text-left text-background flex flex-col justify-center items-center">
-					<h1>Brew</h1>
-					<h1>Your</h1>
-					<h1>Digital Presence</h1>
-					<h1>With a</h1>
-					<h1>Custom Website</h1>
-				</div>
-				<div class="text-left flex flex-col justify-center items-center">
-					<Card.Root>
-						<Card.Header>
-							<Card.Title>Design</Card.Title>
-							<Card.Description>
-								Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint
-								consectetur cupidatat.
-							</Card.Description>
-						</Card.Header>
-						<Card.Footer>
-							<Button variant="outline">See pricing</Button>
-						</Card.Footer>
-					</Card.Root>
-				</div>
-			</div>
-		</section>
+			<Section>
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-start justify-items-start">
+					<div
+						class="text-left text-primary flex flex-col w-full justify-center items-start uppercase justify-self-start"
+					>
+						<h1 class="bg-gradient-to-b from-primary/80 to-surface bg-clip-text text-transparent">
+							Brew
+						</h1>
+						<h1 class="font-light text-primary">Your</h1>
+						<h1 class="bg-gradient-to-b from-primary/90 to-surface bg-clip-text text-transparent">
+							Digital Presence
+						</h1>
+						<h1 class="font-light text-primary">With a</h1>
+						<h1 class=" bg-gradient-to-b from-primary to-surface bg-clip-text text-transparent">
+							Custom Website
+						</h1>
+					</div>
+					<div class="text-left flex flex-col justify-center items-center justify-self-end">
+						<Card.Root class="bg-surface-highlight">
+							<Card.Header>
+								<Card.Description>
+									Your coffee shop needs a website that can boost sales, enhance branding, and
+									improve customer satisfaction.
+								</Card.Description>
+							</Card.Header>
+							<Card.Footer>
+								<Button variant="card" size="long">See pricing</Button>
+							</Card.Footer>
+						</Card.Root>
+					</div>
+				</div></Section
+			>
+		</div>
 
 		<!-- Services -->
 		<section class="max-w-5xl hiddenfornowgrid grid-cols-4 gap-4 hidden">
@@ -375,38 +436,52 @@
 				<div
 					class=" bg-surface p-4 py-8 md:p-6 text-surface-on rounded-3xl flex flex-col items-start gap-12 place-items-center md:items-start"
 				>
-					<h2 class="text-center w-full uppercase">Here are some common Packages</h2>
+					<h2 class="text-center w-full uppercase">Most Common Packages</h2>
 					<div class="flex flex-col place-items-center gap-24 text-center mx-auto">
-						<div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 place-items-center">
-							<div class="flex flex-row gap-4 md:gap-8 place-items-center">
-								<div class="flex flex-col w-fit gap-3 place-items-center">
-									<div class="flex flex-row justify-between w-fit place-items-center gap-2">
+						<div
+							class="grid grid-cols-1 md:grid-cols-2 w-full justify-items-start gap-x-12 gap-y-4 place-items-center"
+						>
+							{#each common_packages as { plans, description }, i}
+								<div
+									class="flex flex-row md:grid md:grid-cols-7 w-full gap-y-8 gap-x-2 md:gap-8 justify-between px-4 sm:px-12 md:justify-start text-center md:text-left"
+								>
+									<div
+										class="flex flex-row justify-between w-fit place-items-center gap-2 col-span-3"
+									>
 										<img
 											src="cups/mocha.png"
 											alt="grande"
-											class="inline-block object-cover h-12 not-prose rounded-3xl"
+											class="inline-block object-cover h-10 w-6 not-prose rounded-3xl"
 										/>
-										<h3 class="uppercase font-bold">Grande</h3>
+										<div class="flex flex-col w-fit justify-start">
+											<h6 class="uppercase font-bold whitespace-nowrap">{plans[0].label}</h6>
+											<h6 class="uppercase whitespace-nowrap">
+												{plans[0].duration}
+												{plans[0].duration > 1 ? 'months' : 'month'}
+											</h6>
+										</div>
 									</div>
-									<h4 class="uppercase">1 Month</h4>
-								</div>
-								<h1>+</h1>
-								<div class="flex flex-col gap-3 place-items-center">
-									<div class="flex flex-row place-items-center gap-2">
+
+									<h1 class="place-self-center">+</h1>
+									<div class="flex flex-row place-items-center gap-2 col-span-3">
 										<img
-											src="cups/cappucino.png"
+											src="cups/mocha.png"
 											alt="grande"
-											class="inline-block object-cover h-12 not-prose rounded-3xl"
+											class="inline-block object-cover h-10 w-6 not-prose rounded-3xl"
 										/>
-										<h3 class="uppercase font-bold">Short</h3>
+										<div class="flex flex-col w-fit justify-start">
+											<h6 class="uppercase font-bold whitespace-nowrap">{plans[1].label}</h6>
+											<h6 class="uppercase whitespace-nowrap">
+												{plans[1].duration}
+												{plans[1].duration > 1 ? 'months' : 'month'}
+											</h6>
+										</div>
 									</div>
-									<h4 class="uppercase">12 Months</h4>
 								</div>
-							</div>
-							<p class="max-w-sm md:text-left">
-								Perfect for a coffee shop to get a custom website and then have us maintain it for a
-								year.
-							</p>
+								<p class="max-w-sm md:text-left pb-12 md:pb-0">
+									{description}
+								</p>
+							{/each}
 						</div>
 					</div>
 				</div>
@@ -475,7 +550,9 @@
 								<Card.Description>
 									{addon.description}
 								</Card.Description>
-								<Button class="mt-auto" size="long" variant="card">Get Started</Button>
+								<Card.Footer>
+									<Button class="" size="long" variant="card">{addon.cta}</Button>
+								</Card.Footer>
 							</Card.Content>
 						</Card.Root>
 					{/each}
