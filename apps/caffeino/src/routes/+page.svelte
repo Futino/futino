@@ -240,7 +240,7 @@
 							Your coffee shop needs a website that can boost sales, enhance branding, and improve
 							customer satisfaction.
 						</p>
-						<Button class="w-fit" size="long" variant="card">Get Started</Button>
+						<Button class="w-fit" size="long" variant="card-highlighted">Get Started</Button>
 					</div>
 				</div>
 				<div class="flex flex-col flex-nowrap md:flex-row gap-4 max-w-7xl md:items-end">
