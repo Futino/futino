@@ -25,6 +25,12 @@
 			description: 'We can keep your menu and all your content up to date.'
 		},
 		{
+			label: 'Tall',
+			img: 'cups/mocha.png',
+			description: 'We can make a simple yet fully custom-designed website.'
+		},
+
+		{
 			label: 'Grande',
 			img: 'cups/mocha.png',
 			description: 'We can make a simple yet fully custom-designed website.'
@@ -165,7 +171,7 @@
 		{
 			plans: [
 				{
-					label: 'Grande-Short',
+					label: 'Tall',
 					duration: 2
 				},
 				{
@@ -183,7 +189,7 @@
 					duration: 1
 				},
 				{
-					label: 'Grande-Short',
+					label: 'Tall',
 					duration: 12
 				}
 			],
@@ -195,45 +201,73 @@
 
 <Prose class="w-screen">
 	<main
-		class="flex flex-col justify-center place-items-center mx-auto items-center text-white overflow-hidden"
+		class="flex flex-col justify-center place-items-center mx-auto items-center text-background-on overflow-hidden"
 	>
 		<!-- Hero -->
 		<div
-			class="h-screen max-w-none w-screen grid justify-center items-center bg-gradient-to-b from-[#DEC7AC] from-50% to-background
+			class="h-screen max-w-none w-screen grid gap-y-4 justify-center items-center bg-gradient-to-b from-primary from-50% to-background
 	"
 		>
-			<Section>
-				<div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-start justify-items-start">
+			<Section class="gap-y-8">
+				<div
+					class="grid grid-cols-1 md:grid-cols-2 gap-x-24 gap-y-8 items-start justify-items-start"
+				>
 					<div
-						class="text-left text-primary flex flex-col w-full justify-center items-start uppercase justify-self-start"
+						class="text-left text-primary flex flex-col -space-y-1 w-full justify-center items-start uppercase justify-self-start"
 					>
-						<h1 class="bg-gradient-to-b from-primary/80 to-surface bg-clip-text text-transparent">
+						<h1
+							class="bg-gradient-to-b from-surface-highlight/60 to-surface bg-clip-text text-transparent"
+						>
 							Brew
 						</h1>
-						<h1 class="font-light text-primary">Your</h1>
-						<h1 class="bg-gradient-to-b from-primary/90 to-surface bg-clip-text text-transparent">
+						<h1 class="font-light text-surface">Your</h1>
+						<h1
+							class="bg-gradient-to-b from-surface-highlight/70 to-surface bg-clip-text text-transparent whitespace-nowrap"
+						>
 							Digital Presence
 						</h1>
-						<h1 class="font-light text-primary">With a</h1>
-						<h1 class=" bg-gradient-to-b from-primary to-surface bg-clip-text text-transparent">
+						<h1 class="font-light text-surface">With a</h1>
+						<h1
+							class="bg-gradient-to-b from-surface-highlight/80 to-surface bg-clip-text text-transparent whitespace-nowrap"
+						>
 							Custom Website
 						</h1>
 					</div>
-					<div class="text-left flex flex-col justify-center items-center justify-self-end">
-						<Card.Root class="bg-surface-highlight">
-							<Card.Header>
-								<Card.Description>
-									Your coffee shop needs a website that can boost sales, enhance branding, and
-									improve customer satisfaction.
-								</Card.Description>
-							</Card.Header>
-							<Card.Footer>
-								<Button variant="card" size="long">See pricing</Button>
-							</Card.Footer>
-						</Card.Root>
+					<div
+						class="flex flex-col gap-2 md:bg-surface-highlight text-surface rounded-3xl md:p-6 md:text-surface-highlight-on place-self-end"
+					>
+						<p>
+							Your coffee shop needs a website that can boost sales, enhance branding, and improve
+							customer satisfaction.
+						</p>
+						<Button class="w-fit" size="long" variant="card">Get Started</Button>
 					</div>
-				</div></Section
-			>
+				</div>
+				<div class="flex flex-col flex-nowrap md:flex-row gap-4 max-w-7xl md:items-end">
+					<img
+						src="brooke.jpg"
+						alt="coffee"
+						class="h-24 w-fit md:h-48 aspect-[2.4] md:aspect-[0.85] rounded-3xl not-prose object-cover"
+					/>
+					<div class="flex flex-row md:flex-col gap-4 max-w-2/3 w-full">
+						<img
+							src="jarek.jpg"
+							alt="coffee"
+							class="h-24 md:h-32 w-fit aspect-[1.3] md:aspect-[1.55] rounded-3xl not-prose object-cover"
+						/>
+						<img
+							src="james.jpg"
+							alt="coffee"
+							class="h-24 md:h-32 w-fit aspect-[1.55] rounded-3xl not-prose object-cover"
+						/>
+					</div>
+					<img
+						src="sara.jpg"
+						alt="coffee"
+						class="h-24 md:h-32 w-full aspect-[1.55] rounded-3xl not-prose object-cover"
+					/>
+				</div>
+			</Section>
 		</div>
 
 		<!-- Services -->
@@ -286,7 +320,7 @@
 				<img
 					src="coffee_cup.png"
 					alt="art"
-					class="w-full h-fit aspect-[5/4] rounded-3xl bg-amber-900 not-prose object-cover"
+					class="w-full h-fit aspect-[5/4] rounded-3xl bg-secondary not-prose object-cover"
 				/>
 				<div class="flex flex-col gap-6 text-center sm:text-left">
 					<h2 class="pb-3">THE #1 COFFEE <br /> WEB-SERVICES AGENCY</h2>
@@ -357,9 +391,10 @@
 								0
 									? 'right-full -translate-x-1/2'
 									: ''} 
-                {i == 1 ? 'left-1/3 -translate-x-[16.7%] ' : ''}
-                {i == 2 ? 'right-1/3 translate-x-[16.7%]' : ''}
-                {i == 3 ? 'left-full translate-x-1/2' : ''}
+                {i == 1 ? 'left-1/4 -translate-x-1/4 ' : ''}
+                {i == 2 ? 'right-1/2 -stranslate-x-1/4' : ''}
+                {i == 3 ? 'right-1/4 translate-x-1/4' : ''}
+                {i == 4 ? 'right-full translate-x-1/2' : ''}
                 "
 							>
 								<img
@@ -386,9 +421,10 @@
 								0
 									? 'right-full -translate-x-1/2'
 									: ''} 
-                {i == 1 ? 'left-1/3 -translate-x-1/4 ' : ''}
-                {i == 2 ? 'right-1/3 translate-x-1/4 ' : ''}
-                {i == 3 ? 'left-full translate-x-1/2' : ''}
+                {i == 1 ? 'invisible left-1/4 -translate-x-1/4 ' : ''}
+                {i == 2 ? 'right-1/2 translate-x-1/2 ' : ''}
+                {i == 3 ? 'invisible right-1/4 translate-x-1/4' : ''}
+                {i == 4 ? 'left-full translate-x-1/2' : ''}
                 {sliderPercent >= i / (cupSizes.length - 1) ? 'text-tertiary' : ''} 
                 "
 							>
@@ -398,7 +434,9 @@
                   {i == 0 ? '45' : ''}
                   {i == 1 ? '162' : ''}
                   {i == 2 ? '45' : ''}
-                  {i == 3 ? '162' : ''}"
+                  {i == 3 ? '162' : ''}
+                  {i == 4 ? '45' : ''}
+                  "
 									fill="none"
 									xmlns="http://www.w3.org/2000/svg"
 									><g id="SVGRepo_bgCarrier" stroke-width="0" /><g
@@ -411,7 +449,9 @@
                       {i == 0 ? '43' : ''}
                       {i == 1 ? '160' : ''}
                       {i == 2 ? '43' : ''}
-                      {i == 3 ? '160' : ''}"
+                      {i == 3 ? '160' : ''}
+                      {i == 4 ? '43' : ''}
+                      "
 											stroke="currentColor"
 											stroke-width="4"
 											stroke-linecap="round"
@@ -439,7 +479,7 @@
 					<h2 class="text-center w-full uppercase">Most Common Packages</h2>
 					<div class="flex flex-col place-items-center gap-24 text-center mx-auto">
 						<div
-							class="grid grid-cols-1 md:grid-cols-2 w-full justify-items-start gap-x-12 gap-y-4 place-items-center"
+							class="grid grid-cols-1 md:grid-cols-2 w-full justify-items-start gap-x-12 gap-y-4 md:gap-y-12 place-items-center"
 						>
 							{#each common_packages as { plans, description }, i}
 								<div
@@ -551,7 +591,7 @@
 									{addon.description}
 								</Card.Description>
 								<Card.Footer>
-									<Button class="" size="long" variant="card">{addon.cta}</Button>
+									<Button size="long" variant="card">{addon.cta}</Button>
 								</Card.Footer>
 							</Card.Content>
 						</Card.Root>

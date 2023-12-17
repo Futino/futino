@@ -12,6 +12,6 @@
 	export { className as class };
 </script>
 
-<svelte:element this={tag} class={cn(' text-left ', className)} {...$$restProps}>
+<svelte:element this={tag} class={cn(' text-left text-surface-on', className)} {...$$restProps}>
 	<slot />
 </svelte:element>
