@@ -4,18 +4,18 @@ const typography = (colors, alpha) => {
   return {
     main: {
       css: {
-        "--tw-prose-body": fColors.background.on.DEFAULT,
-        "--tw-prose-headings": fColors.background.on.DEFAULT,
+        "--tw-prose-body": fColors.surface.on.DEFAULT,
+        "--tw-prose-headings": fColors.surface.on.DEFAULT,
         "--tw-prose-lead": colors.neutral[400],
         "--tw-prose-links": fColors.tertiary.DEFAULT.replace(alpha, 1),
-        "--tw-prose-bold": fColors.background.on.DEFAULT,
+        "--tw-prose-bold": colors.white,
         "--tw-prose-counters": colors.neutral[400],
         "--tw-prose-bullets": fColors.secondary.DEFAULT.replace(alpha, 0.4),
         "--tw-prose-hr": colors.neutral[700],
         "--tw-prose-quotes": colors.neutral[100],
         "--tw-prose-quote-borders": fColors.secondary.DEFAULT.replace(
           alpha,
-          0.3
+          0.3,
         ),
         "--tw-prose-captions": colors.neutral[400],
         "--tw-prose-code": colors.white,

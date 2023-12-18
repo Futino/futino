@@ -5,17 +5,17 @@ const typography = (colors, alpha) => {
     main: {
       css: {
         "--tw-prose-body": colors.neutral[300],
-        "--tw-prose-headings": colors.red[900],
+        "--tw-prose-headings": colors.white,
         "--tw-prose-lead": colors.neutral[400],
         "--tw-prose-links": fColors.tertiary.DEFAULT.replace(alpha, 1),
         "--tw-prose-bold": colors.white,
         "--tw-prose-counters": colors.neutral[400],
         "--tw-prose-bullets": fColors.secondary.DEFAULT.replace(alpha, 0.4),
-        "--tw-prose-hr": colors.neutral[100],
+        "--tw-prose-hr": colors.neutral[700],
         "--tw-prose-quotes": colors.neutral[100],
         "--tw-prose-quote-borders": fColors.secondary.DEFAULT.replace(
           alpha,
-          0.3
+          0.3,
         ),
         "--tw-prose-captions": colors.neutral[400],
         "--tw-prose-code": colors.white,
