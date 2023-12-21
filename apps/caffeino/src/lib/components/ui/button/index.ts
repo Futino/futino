@@ -12,7 +12,7 @@ const buttonVariants = tv({
 			secondary: 'bg-secondary text-secondary-on hover:bg-secondary/80',
 			ghost: 'hover:bg-accent hover:text-accent-foreground',
 			link: 'text-primary underline-offset-4 hover:underline',
-			card: 'bg-primary text-primary-on hover:text-primary hover:bg-primary-on',
+			card: 'bg-primary text-primary-on hover:text-primary font-bold hover:bg-primary-on',
 			'card-highlighted': 'bg-background text-background-on hover:text-primary-on hover:bg-primary'
 		},
 		size: {

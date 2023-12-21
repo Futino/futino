@@ -4,7 +4,7 @@
 	import * as Card from '$lib/components/ui/card';
 	import { Button } from '$lib/components/ui/button';
 	import PricingSlider from './PricingSlider.svelte';
-	import Icon from '$lib/components/atoms/Icon.svelte';
+	import { Icon } from '$lib/components/ui/icon';
 	import SearchBox from '$lib/components/atoms/SearchBox.svelte';
 
 	// Current price of slider
@@ -92,7 +92,7 @@
 			prefix: '$',
 			price: 67,
 			cycle: 'mo',
-			icon: 'icons/ads.png',
+			icon: 'advertising',
 			description: `Elevate your online visibility with targeted Google Ads. 
         Our experts craft strategic campaigns to drive traffic, increase conversions, and maximize your ROI.
         Boost your presence where it matters most and watch your business flourish.`,
@@ -103,7 +103,7 @@
 			prefix: '$',
 			price: 279,
 			cycle: 'yr',
-			icon: 'icons/dms.png',
+			icon: 'domain',
 			description: `Simplify your online presence with hassle-free domain management. 
         We take care of the technicalities, ensuring your domain is secure, up-to-date, and seamlessly integrated with your website.
         Focus on your business while we handle the domain intricacies.`,
@@ -114,7 +114,7 @@
 			prefix: '$',
 			price: 90,
 			cycle: 'hr',
-			icon: 'icons/automation.png',
+			icon: 'automation',
 			description: `Streamline your operations and save valuable time with our task automation solutions.
         From routine processes to complex workflows, we design automation tailored to your needs.
         Enjoy efficiency, reduce manual workload, and let technology work for you.`,
@@ -125,7 +125,7 @@
 			prefix: '$',
 			price: 527,
 			suffix: '',
-			icon: 'icons/brandbook.png',
+			icon: 'book',
 			description: `Elevate your brand with our Brand Book service. 
         A Forbes study revealed a 23% average revenue increase for businesses maintaining brand consistency. 
         From logo guidelines to tone of voice, we compile a cohesive document ensuring a unified brand image across all platforms.`,
@@ -135,7 +135,7 @@
 			label: 'Online Ordering',
 			price: 2.7,
 			suffix: '%',
-			icon: 'icons/onlineordering.png',
+			icon: 'phone-store',
 			description: `Experience the future of sales with our Online Ordering system. 
         With mobile orders driving 20% of Starbucks' total sales, tap into the potential of this lucrative market.
         Seamless integration into your website makes ordering and payment a breeze for your customers. `,
@@ -370,7 +370,8 @@
 					<h2>PRICING</h2>
 					<p class="max-w-prose">
 						We’ve replaced the traditional path of unreliable freelancers and expensive agencies
-						with a scalable subscription that depends on exactly what your businesses needs.
+						with a scalable subscription. Got big plans next month? Get a big plan for that month.
+						Want to take it slow? Spread the costs over multiple months.
 					</p>
 				</div>
 				<div class="flex flex-col md:gap-3 text-center sm:text-right">
@@ -405,7 +406,7 @@
 								<h6
 									class="uppercase whitespace-normal font-bold {sliderPercent >=
 									i / (cupSizes.length - 1)
-										? 'text-tertiary'
+										? 'text-primary'
 										: ''} "
 								>
 									{cupSize.label}
@@ -425,7 +426,7 @@
                 {i == 2 ? 'right-1/2 translate-x-1/2 ' : ''}
                 {i == 3 ? 'invisible right-1/4 translate-x-1/4' : ''}
                 {i == 4 ? 'left-full translate-x-1/2' : ''}
-                {sliderPercent >= i / (cupSizes.length - 1) ? 'text-tertiary' : ''} 
+                {sliderPercent >= i / (cupSizes.length - 1) ? 'text-primary' : ''} 
                 "
 							>
 								<svg
@@ -560,22 +561,20 @@
 						<Card.Root class="h-full">
 							<Card.Header>
 								<div class="flex flex-row justify-between">
-									<img
-										src="icons/ads.png"
-										alt=""
-										class="w-14 h-14 bg-background rounded-full not-prose"
-									/>
-									<div class="flex flex-row text-right items-end">
+									<div class="bg-surface-on rounded-full text-surface p-4">
+										<Icon icon={addon.icon} width="32" height="32" />
+									</div>
+									<div class="flex flex-row text-right items-end [&>*]:text-primary">
 										{#if addon.prefix}
-											<h2 class="text-tertiary">
+											<h2 class="">
 												{addon.prefix}
 											</h2>
 										{/if}
-										<h2 class="text-tertiary">
+										<h2 class="">
 											{addon.price}
 										</h2>
 										{#if addon.suffix}
-											<h2 class="text-tertiary">
+											<h2 class="">
 												{addon.suffix}
 											</h2>
 										{/if}

@@ -5,16 +5,17 @@
 	const cogs = 5.35;
 	const markup = 1.4; // 40%
 	const minHours = 1;
-	const maxHours = 25;
+	const maxHours = 20;
 
 	export let price: string;
 	export let hours: number;
-	export let sliderPercent;
+	export let sliderPercent: number;
 
 	$: slider = [0];
 	$: hours = Math.floor(
 		((12000 / (slider[0] - 600)) * -1 - 20) * (maxHours / 100) * (1 - minHours / 100) + minHours
 	);
+	$: hours = Math.floor(maxHours * sliderPercent);
 	$: expenses = hours * hourlyRate + cogs;
 	$: markedUp = expenses * markup;
 	$: fees = markedUp * 0.0713 + 0.3;
