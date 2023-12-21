@@ -15,7 +15,7 @@
 	$: hours = Math.floor(
 		((12000 / (slider[0] - 600)) * -1 - 20) * (maxHours / 100) * (1 - minHours / 100) + minHours
 	);
-	$: hours = Math.floor(maxHours * sliderPercent);
+	$: hours = Math.ceil(maxHours * sliderPercent + 0.0001); // The + 0.0001 is just to make the slider's min hours =0
 	$: expenses = hours * hourlyRate + cogs;
 	$: markedUp = expenses * markup;
 	$: fees = markedUp * 0.0713 + 0.3;

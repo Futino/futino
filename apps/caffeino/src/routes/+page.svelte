@@ -145,7 +145,7 @@
 			label: 'E-commerce',
 			price: 2.7,
 			suffix: '%',
-			icon: 'icons/ecommerce.png',
+			icon: 'ecommerce',
 			description: `Brew success for your coffee business with our tailored Ecommerce solution. 
         From seamless product listings to secure payment gateways, 
         we create an online store that not only showcases your offerings but also ensures a smooth and secure shopping experience.`,
@@ -157,7 +157,7 @@
 		{
 			plans: [
 				{
-					label: 'Grande',
+					label: 'Tall',
 					duration: 1
 				},
 				{
@@ -171,7 +171,7 @@
 		{
 			plans: [
 				{
-					label: 'Tall',
+					label: 'Short',
 					duration: 2
 				},
 				{
@@ -234,37 +234,39 @@
 						</h1>
 					</div>
 					<div
-						class="flex flex-col gap-2 md:bg-surface-highlight text-surface rounded-3xl md:p-6 md:text-surface-highlight-on place-self-end"
+						class="flex flex-col gap-5 md:bg-surface-highlight text-surface rounded-3xl md:p-8 md:text-surface-highlight-on place-self-end"
 					>
-						<p>
+						<p class="max-w-lg">
 							Your coffee shop needs a website that can boost sales, enhance branding, and improve
 							customer satisfaction.
 						</p>
 						<Button class="w-fit" size="long" variant="card-highlighted">Get Started</Button>
 					</div>
 				</div>
-				<div class="flex flex-col flex-nowrap md:flex-row gap-4 max-w-7xl md:items-end">
+				<div
+					class="flex flex-col flex-nowrap md:flex-row gap-4 max-w-7xl justify-self-start md:items-end"
+				>
 					<img
 						src="brooke.jpg"
 						alt="coffee"
-						class="h-24 w-fit md:h-48 aspect-[2.4] md:aspect-[0.85] rounded-3xl not-prose object-cover"
+						class="h-28 w-full md:h-48 max-w-[60%] md:aspect-[0.85] rounded-3xl not-prose object-cover"
 					/>
-					<div class="flex flex-row md:flex-col gap-4 max-w-2/3 w-full">
+					<div class="flex flex-row md:flex-col gap-4 max-w-[80%] w-full">
 						<img
 							src="jarek.jpg"
 							alt="coffee"
-							class="h-24 md:h-32 w-fit aspect-[1.3] md:aspect-[1.55] rounded-3xl not-prose object-cover"
+							class="h-28 md:h-32 w-full md:aspect-[1.55] rounded-3xl not-prose object-cover"
 						/>
 						<img
 							src="james.jpg"
 							alt="coffee"
-							class="h-24 md:h-32 w-fit aspect-[1.55] rounded-3xl not-prose object-cover"
+							class="h-28 md:h-32 w-full aspect-[1.55] rounded-3xl not-prose object-cover"
 						/>
 					</div>
 					<img
-						src="sara.jpg"
+						src="jennifer.jpg"
 						alt="coffee"
-						class="h-24 md:h-32 w-full aspect-[1.55] rounded-3xl not-prose object-cover"
+						class="h-44 md:h-32 w-full aspect-[4] rounded-3xl not-prose object-cover"
 					/>
 				</div>
 			</Section>
@@ -561,7 +563,7 @@
 						<Card.Root class="h-full">
 							<Card.Header>
 								<div class="flex flex-row justify-between">
-									<div class="bg-surface-on rounded-full text-surface p-4">
+									<div class="bg-surface-on rounded-full text-surface p-3">
 										<Icon icon={addon.icon} width="32" height="32" />
 									</div>
 									<div class="flex flex-row text-right items-end [&>*]:text-primary">
